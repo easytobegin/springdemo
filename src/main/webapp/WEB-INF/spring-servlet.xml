@@ -37,5 +37,8 @@
 
     <!--将HelloWorldController添加到Spring配置文件中,让其接受Spring IOC容器管理 -->
     <!--name="/hello"：前边配置的BeanNameUrlHandlerMapping，表示如过请求的URL为 “上下文/hello”，则将会交给该Bean进行处理。 -->
+    <!-- name可以是重定向的URL -->
     <bean name="/hello" class="com.minisheep.controller.HelloWorldController"></bean>
+    <bean name="/loginAction.do" class="com.minisheep.controller.VerifyController"></bean>
+    <bean name="/success" class="com.minisheep.controller.SuccessController"></bean>
 </beans>

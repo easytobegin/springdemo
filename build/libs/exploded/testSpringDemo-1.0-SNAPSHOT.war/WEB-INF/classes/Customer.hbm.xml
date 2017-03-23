@@ -22,5 +22,6 @@
         -->
         <property name="name" column="NAME" length="100"></property>
         <property name="age" column="AGE" length="10"></property>
+        <property name="password" column="PASSWORD" length="100"></property>
     </class>
 </hibernate-mapping>

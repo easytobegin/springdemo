@@ -19,13 +19,13 @@ public class HelloWorldController implements Controller {
         //3.将命令对象传入业务对象进行业务处理
         //4.选择下一个页面
 
-//        Customer customer = new Customer(1,"陈扬",22);
-//        Customer customer1 = new Customer(2,"海峰",22);
-//        Customer customer2 = new Customer(3,"小灿",22);
+        Customer customer = new Customer(1,"陈扬",22,"220015");
+        Customer customer1 = new Customer(2,"海峰",22,"haifeng");
+        Customer customer2 = new Customer(3,"小灿",22,"xiaocan");
 
-//        JdbcCustomerDao.getInstance().insert(customer);
-//        JdbcCustomerDao.getInstance().insert(customer1);
-//        JdbcCustomerDao.getInstance().insert(customer2);
+        JdbcCustomerDao.getInstance().insert(customer);
+        JdbcCustomerDao.getInstance().insert(customer1);
+        JdbcCustomerDao.getInstance().insert(customer2);
 
         Customer customer3 = JdbcCustomerDao.getInstance().findByCustomerId(3);
 

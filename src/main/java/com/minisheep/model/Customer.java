@@ -8,11 +8,24 @@ public class Customer {
     String name;
     int age;
 
-    public Customer(int custId, String name, int age) {
+    public Customer(int custId, String name, int age, String password) {
         this.custId = custId;
         this.name = name;
         this.age = age;
+        this.password = password;
     }
+
+    public String getPassword() {
+
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    String password;
+
 
     public Customer() {
     }
