@@ -7,6 +7,8 @@ public class Customer {
     int custId;
     String name;
     int age;
+    String password;
+
 
     public Customer(int custId, String name, int age, String password) {
         this.custId = custId;
@@ -24,7 +26,6 @@ public class Customer {
         this.password = password;
     }
 
-    String password;
 
 
     public Customer() {
@@ -62,4 +63,5 @@ public class Customer {
     public void setAge(int age) {
         this.age = age;
     }
+
 }

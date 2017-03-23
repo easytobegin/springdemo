@@ -12,6 +12,8 @@ import java.lang.annotation.Annotation;
 /**
  * Created by minisheep on 17/3/22.
  */
+
+
 public class HelloWorldController implements Controller {
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         //1.收集参数、验证参数

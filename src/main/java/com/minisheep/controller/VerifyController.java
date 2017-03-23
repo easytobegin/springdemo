@@ -28,8 +28,9 @@ public class VerifyController extends AbstractController{
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        String dbName = JdbcCustomerDao.getInstance().findByCustomerId(3).getName();
-        String dbPassword = JdbcCustomerDao.getInstance().findByCustomerId(3).getPassword();
+        //String dbName = JdbcCustomerDao.getInstance().findByCustomerId(3).getName();
+        //String dbPassword = JdbcCustomerDao.getInstance().findByCustomerId(3).getPassword();
+
         ModelAndView mv = null;
 
         if(username == null){  //跳转回登录界面
@@ -37,12 +38,14 @@ public class VerifyController extends AbstractController{
             mv.setViewName("login");
             return mv;
         }
-        System.out.println("username:" + username + " " + "password:" + password);
 
-        System.out.println("dbusername:" + dbName + " " + "dbpassword:" + dbPassword);
+        boolean flag = JdbcCustomerDao.getInstance().isExistUserandPass(username,password);
+        //System.out.println("username:" + username + " " + "password:" + password);
+
+        //System.out.println("dbusername:" + dbName + " " + "dbpassword:" + dbPassword);
 
         //登录成功
-        if(username.equals(dbName) && password.equals(dbPassword)){
+        if(flag){
             mv = new ModelAndView(new RedirectView("/success")); //数据
             //mv.setViewName("success");  //View
           //System.out.println("验证成功！");
